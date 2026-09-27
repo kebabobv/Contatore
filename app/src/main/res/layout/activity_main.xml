@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/counter_title"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
+        android:layout_marginBottom="55dp" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count_initial_value"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/count_text_size"
+        android:textStyle="bold"
+        android:layout_marginBottom="55dp" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="35dp">
+
+        <Button
+            android:id="@+id/button_minus"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:text="@string/button_minus"
+            android:textSize="@dimen/button_text_size"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:onClick="countDown" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:text="@string/button_plus"
+            android:textSize="@dimen/button_text_size"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:onClick="countUp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:text="@string/button_reset"
+        android:textSize="@dimen/reset_text_size"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary_dark"
+        android:onClick="resetCount" />
+
+</LinearLayout>
